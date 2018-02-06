@@ -1,0 +1,93 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse; }
+
+.form-control:focus {
+  color: #1a2328;
+  outline: none;
+  box-shadow: none; }
+
+.content {
+  margin-top: 100px; }
+  .content .wrap-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .content .wrap-box .box-form {
+      border: 1px solid #E8EDF2;
+      padding: 15px;
+      width: 400px;
+      box-shadow: -6px 6px 22px rgba(0, 0, 0, 0.15); }
+      .content .wrap-box .box-form .boxs-header {
+        color: #1a2328;
+        padding: 10px 0px;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: "Roboto", sans-serif; }
+      .content .wrap-box .box-form .boxs-body form label {
+        color: #1a2328;
+        padding: 8px 0px;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Roboto", sans-serif; }
+      .content .wrap-box .box-form .boxs-body form input {
+        border-color: #E8EDF2;
+        font-family: "Roboto", sans-serif; }
+        .content .wrap-box .box-form .boxs-body form input ::-webkit-input-placeholder,
+        .content .wrap-box .box-form .boxs-body form input ::-moz-placeholder,
+        .content .wrap-box .box-form .boxs-body form input :-moz-placeholder,
+        .content .wrap-box .box-form .boxs-body form input :-ms-input-placeholder {
+          color: #E8EDF2 !important;
+          text-indent: 10px; }
+      .content .wrap-box .box-form .btn-custom {
+        background-color: #02b875;
+        border: 2px solid transparent;
+        color: #ffffff;
+        transition: .3s;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "Roboto", sans-serif; }
+        .content .wrap-box .box-form .btn-custom:hover {
+          background-color: #ffffff;
+          border: 2px solid #02b875;
+          color: #02b875; }
+
+/*# sourceMappingURL=main.css.map */
