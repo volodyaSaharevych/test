@@ -1,64 +1,157 @@
-.content {
+
+.panel {
     margin-top: 100px;
-    .wrap-box {
+    box-shadow: -6px 6px 22px rgba(0, 0, 0, 0.15);
+    border: 1px solid $c-grey;
+    padding: 0px 20px;
+
+    .panel-head, 
+    .panel-body {
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
-        .box-form {
-            border: 1px solid $c-grey;
-            padding: 15px;
-            width: 400px;
-            box-shadow: -6px 6px 22px rgba(0, 0, 0, 0.15);
-            .boxs-header {
+    }
+    .panel-head {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px 0px;
+        border-bottom: 1px solid $c-grey;
+        a {
+            text-transform: uppercase;
+            color: $c-grey;
+            font: {
+                size: 18px;
+                weight: 600;
+                family: $roboto;
+            }
+            &:hover, &:focus, &:visited {
+                outline: none;
+                box-shadow: none;
+                text-decoration: none;
+            }
+        }
+        .active {
+            color: $c-green;
+        }
+    }
+    .panel-body {
+        flex-direction: column;
+
+        .wrap-submit-form {
+            display: block;
+        }
+        .wrap-upload-form {
+            display: none;
+        }
+    }
+}
+
+.box-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    width: 440px;
+    .boxs-header {
+        color: $c-black;
+        padding: 10px 0px;
+        font : {
+            size: 24px;
+            weight: 400;
+            family: $roboto;
+        }
+    }
+    .boxs-body {
+        .form-group {
+            position: relative;
+            &::before {
+                content: '*';
+                color: $c-red;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .parsley-errors-list li {
+                color: $c-red;
+                margin: 4px 12px;
+                font: {
+                    size: 16px;
+                    family: $roboto;
+                    weight: 400;
+                }
+            }
+        }
+        .not-require::before {
+            content: '';
+        }
+        form {
+            label {
                 color: $c-black;
-                padding: 10px 0px;
+                padding: 8px 0px;
+                margin-left: 14px;
                 font : {
-                    size: 24px;
+                    size: 16px;
+                    weight: 400;
+                    family: $roboto;
+                }
+            } 
+            input {
+                border-color: $c-grey;
+                font-family: $roboto;
+                border-radius: 0;
+                ::-webkit-input-placeholder,
+                ::-moz-placeholder,
+                :-moz-placeholder,
+                :-ms-input-placeholder {
+                    color: $c-grey !important;
+                    text-indent: 10px;
+                }
+            }
+            .custom-select {
+                font: {
+                    size: 16px;
                     weight: 400;
                     family: $roboto;
                 }
             }
-            .boxs-body {
-                form {
-                    label {
-                        color: $c-black;
-                        padding: 8px 0px;
-                        font : {
-                            size: 16px;
-                            weight: 400;
-                            family: $roboto;
-                        }
-                    } 
-                    input {
-                        border-color: $c-grey;
-                        font-family: $roboto;
-                        ::-webkit-input-placeholder,
-                        ::-moz-placeholder,
-                        :-moz-placeholder,
-                        :-ms-input-placeholder {
-                            color: $c-grey !important;
-                            text-indent: 10px;
-                        }
-                    } 
-                }
-            }
-            .btn-custom {
-                background-color: $c-green;
-                border: 2px solid transparent;
-                color: $c-white;
-                transition: .3s;
+            textarea {
+                border: 1px solid $c-grey;
+                border-radius: 0;
                 font : {
-                    size: 18px;
+                    size: 16px;
                     weight: 400;
                     family: $roboto;
                 }
-                &:hover {
-                    background-color: $c-white;
-                    border: 2px solid $c-green;
-                    color: $c-green;
+                &:hover, &:focus {
+                    outline: none;
+                    box-shadow: none;
                 }
             }
+
+        }
+    }
+    .btn-custom {
+        background-color: $c-green;
+        border: 2px solid transparent;
+        color: $c-white;
+        border-radius: 0;
+        transition: .3s;
+        font : {
+            size: 18px;
+            weight: 400;
+            family: $roboto;
+        }
+        &:hover {
+            background-color: $c-white;
+            border: 2px solid $c-green;
+            color: $c-green;
+        }
+        &:hover, &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        &:disabled {
+            opacity: .3;
         }
     }
 }

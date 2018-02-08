@@ -12,43 +12,79 @@
 <body>
     <article>
         <div class="container">
-            <div class="content">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="wrap-box">
+            <div class="row">
+                <div class="col-xl-7">
+                    <div class="panel">
+                        <div class="panel-head">
+                            <div class="title">
+                                <a id="submit" class="active" href="">Submit Form</a>
+                            </div>
+                            <div class="title">
+                                <a id="upload" href="">Upload Form</a></div>
+                        </div>
+                        <div class="panel-body">
                             <div class="box-form">
-                                <div class="boxs-header">
-                                    <h2 class="custom-font"><strong>Form</strong> Submit</h2>
-                                </div>
                                 <div class="boxs-body">
-                                    <form name="form-submit" role="form" id="form-submit">
-                                        <div class="form-group">
-                                            <label for="username">Username : </label>
-                                            <input type="text" name="username" id="username" class="form-control" 
-                                                placeholder="Your name..."
-                                                data-parsley-trigger="change" 
-                                                data-parsley-range="[4, 20]" required>
+                                    <form name="custom-form" role="form" id="form-submit">
+                                        <div class="wrap-submit-form">
+                                            <div class="form-group">
+                                                <label for="username">Username : </label>
+                                                <input type="text" name="username" id="user-name" class="form-control" placeholder="Volodya"
+                                                        required="" 
+                                                        data-parsley-trigger="change" 
+                                                        data-parsley-stringtype>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email : </label>
+                                                <input type="text" name="email" id="email" class="form-control" placeholder="email.com"
+                                                        required=""
+                                                        data-parsley-trigger="change"
+                                                        data-parsley-emailtype>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="control-select">Select issue</label>
+                                                <select id="control-select" class="form-control custom-select" 
+                                                        required="" 
+                                                        data-parsley-trigger="change">
+                                                    <option value=""></option>
+                                                    <option value="Network break">Network break</option>
+                                                    <option value="Slow network">Slow network</option>
+                                                    <option value="Bad comunication">Bad comunication</option>
+                                                </select>
+                                            </div> 
                                         </div>
-                                        <div class="form-group">
-                                            <label for="email">Email : </label>
-                                            <input type="email" name="email" id="email" class="form-control" 
-                                                    placeholder="Your email..."
-                                                    data-parsley-trigger="change" required>
-                                        </div>  
+                                        <div class="wrap-upload-form"> 
+                                            <div class="form-group">
+                                                <label for="exampleTextarea">Problem</label>
+                                                <textarea class="form-control" id="custom-textarea" rows="3" 
+                                                          required=""
+                                                          data-parsley-trigger="change"
+                                                          data-parsley-minlength="5"
+                                                          data-parsley-maxlength="300">
+                                                </textarea>
+                                            </div>
+                                            <div class="form-group not-require">    
+                                                <label class="lab-custom" for="file">Upload image&hellip;</label>
+                                                <input type="file" name="file" id="file" class="file"/>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                                 <div class="boxs-footer text-right">
-                                    <button type="submit" class="btn btn-custom" id="form-submit" disabled>Submit</button>
+                                    <button type="submit" class="btn btn-custom" id="btn-form-submit" for="from-submit" disabled>Send</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="upload-img"></div>
-                   </div>
-               </div>
-           </div>
-       </div>
+                </div>
+                <div class="col-xl-5">
+
+                </div>
+            </div>
+        </div>
     </article>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/parsleyjs/dist/parsley.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

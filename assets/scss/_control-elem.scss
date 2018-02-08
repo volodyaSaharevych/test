@@ -1,0 +1,36 @@
+.box-form .boxs-body form {
+    .file {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .file + label {
+        display: none;
+    }
+
+    .lab-custom {
+        background-color: $c-green;
+        border: 2px solid $c-green;
+        color: $c-white;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        transition: .3s;
+        font : {
+            size: 18px;
+            weight: 400;
+            family: $roboto;
+        }
+        &:hover {
+            color: $c-green;
+            background-color: $c-white;
+        }
+
+    }
+
+}

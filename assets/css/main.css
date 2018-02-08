@@ -44,50 +44,140 @@ table {
   outline: none;
   box-shadow: none; }
 
-.content {
-  margin-top: 100px; }
-  .content .wrap-box {
+.panel {
+  margin-top: 100px;
+  box-shadow: -6px 6px 22px rgba(0, 0, 0, 0.15);
+  border: 1px solid #E8EDF2;
+  padding: 0px 20px; }
+  .panel .panel-head,
+  .panel .panel-body {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center; }
-    .content .wrap-box .box-form {
-      border: 1px solid #E8EDF2;
-      padding: 15px;
-      width: 400px;
-      box-shadow: -6px 6px 22px rgba(0, 0, 0, 0.15); }
-      .content .wrap-box .box-form .boxs-header {
-        color: #1a2328;
-        padding: 10px 0px;
-        font-size: 24px;
-        font-weight: 400;
-        font-family: "Roboto", sans-serif; }
-      .content .wrap-box .box-form .boxs-body form label {
-        color: #1a2328;
-        padding: 8px 0px;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: "Roboto", sans-serif; }
-      .content .wrap-box .box-form .boxs-body form input {
-        border-color: #E8EDF2;
-        font-family: "Roboto", sans-serif; }
-        .content .wrap-box .box-form .boxs-body form input ::-webkit-input-placeholder,
-        .content .wrap-box .box-form .boxs-body form input ::-moz-placeholder,
-        .content .wrap-box .box-form .boxs-body form input :-moz-placeholder,
-        .content .wrap-box .box-form .boxs-body form input :-ms-input-placeholder {
-          color: #E8EDF2 !important;
-          text-indent: 10px; }
-      .content .wrap-box .box-form .btn-custom {
-        background-color: #02b875;
-        border: 2px solid transparent;
-        color: #ffffff;
-        transition: .3s;
-        font-size: 18px;
-        font-weight: 400;
-        font-family: "Roboto", sans-serif; }
-        .content .wrap-box .box-form .btn-custom:hover {
-          background-color: #ffffff;
-          border: 2px solid #02b875;
-          color: #02b875; }
+  .panel .panel-head {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0px;
+    border-bottom: 1px solid #E8EDF2; }
+    .panel .panel-head a {
+      text-transform: uppercase;
+      color: #E8EDF2;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: "Roboto", sans-serif; }
+      .panel .panel-head a:hover, .panel .panel-head a:focus, .panel .panel-head a:visited {
+        outline: none;
+        box-shadow: none;
+        text-decoration: none; }
+    .panel .panel-head .active {
+      color: #02b875; }
+  .panel .panel-body {
+    flex-direction: column; }
+    .panel .panel-body .wrap-submit-form {
+      display: block; }
+    .panel .panel-body .wrap-upload-form {
+      display: none; }
+
+.box-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  width: 440px; }
+  .box-form .boxs-header {
+    color: #1a2328;
+    padding: 10px 0px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif; }
+  .box-form .boxs-body .form-group {
+    position: relative; }
+    .box-form .boxs-body .form-group::before {
+      content: '*';
+      color: #f01f3d;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .box-form .boxs-body .form-group .parsley-errors-list li {
+      color: #f01f3d;
+      margin: 4px 12px;
+      font-size: 16px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400; }
+  .box-form .boxs-body .not-require::before {
+    content: ''; }
+  .box-form .boxs-body form label {
+    color: #1a2328;
+    padding: 8px 0px;
+    margin-left: 14px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif; }
+  .box-form .boxs-body form input {
+    border-color: #E8EDF2;
+    font-family: "Roboto", sans-serif;
+    border-radius: 0; }
+    .box-form .boxs-body form input ::-webkit-input-placeholder,
+    .box-form .boxs-body form input ::-moz-placeholder,
+    .box-form .boxs-body form input :-moz-placeholder,
+    .box-form .boxs-body form input :-ms-input-placeholder {
+      color: #E8EDF2 !important;
+      text-indent: 10px; }
+  .box-form .boxs-body form .custom-select {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif; }
+  .box-form .boxs-body form textarea {
+    border: 1px solid #E8EDF2;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif; }
+    .box-form .boxs-body form textarea:hover, .box-form .boxs-body form textarea:focus {
+      outline: none;
+      box-shadow: none; }
+  .box-form .btn-custom {
+    background-color: #02b875;
+    border: 2px solid transparent;
+    color: #ffffff;
+    border-radius: 0;
+    transition: .3s;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif; }
+    .box-form .btn-custom:hover {
+      background-color: #ffffff;
+      border: 2px solid #02b875;
+      color: #02b875; }
+    .box-form .btn-custom:hover, .box-form .btn-custom:focus {
+      outline: none;
+      box-shadow: none; }
+    .box-form .btn-custom:disabled {
+      opacity: .3; }
+
+.box-form .boxs-body form .file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+.box-form .boxs-body form .file + label {
+  display: none; }
+.box-form .boxs-body form .lab-custom {
+  background-color: #02b875;
+  border: 2px solid #02b875;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  transition: .3s;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif; }
+  .box-form .boxs-body form .lab-custom:hover {
+    color: #02b875;
+    background-color: #ffffff; }
 
 /*# sourceMappingURL=main.css.map */
