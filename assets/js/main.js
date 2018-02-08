@@ -6,6 +6,7 @@ $( function () {
         $uploadForm = $(".wrap-upload-form"),
         $linkUpload = $('#upload'),
         $linkSubmit = $('#submit'),
+        $file       = $('#file-img'),
         $pars       = window.Parsley;
 
         
@@ -51,6 +52,23 @@ $( function () {
         $linkSubmit.removeClass('active');
 		$( this ).addClass('active');
 		e.preventDefault();
+    });
+    
+    //file upload 
+    $file.on('change', function () {
+        var $that  = $( this );
+            _files = this.files;
+
+        if ( _files && _files[ 0 ] ) {
+
+            var reader = new FileReader();
+
+            reader.onload = function ( e ) {
+                $('#img-upload').attr( 'src', e.target.result );
+            };
+
+            reader.readAsDataURL( _files[0] );
+        }
     });
     
 }());
