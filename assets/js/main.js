@@ -90,7 +90,7 @@ $( function () {
         };
         
         $.post({
-            url  : 'www.google.com.ua/',
+            url  : 'https://www.google.com/',
             data : dataModel,
             crossDomain: true
         }).done( function ( data ) {
