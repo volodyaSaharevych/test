@@ -108,6 +108,7 @@ $( function () {
              $problem.val('');
              $description.val('');
              $('#img-upload').attr( 'src', '#' );
+             $submit.prop( 'disabled', true );
 
         });
         
