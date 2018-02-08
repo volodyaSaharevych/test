@@ -123,6 +123,7 @@
             textarea {
                 border: 1px solid $c-grey;
                 border-radius: 0;
+                text-align: left;
                 font : {
                     size: 16px;
                     weight: 400;
@@ -142,6 +143,7 @@
         color: $c-white;
         border-radius: 0;
         transition: .3s;
+        margin-top: 10px; 
         font : {
             size: 18px;
             weight: 400;
@@ -159,5 +161,27 @@
         &:disabled {
             opacity: .3;
         }
+    }
+}
+.panel-message {
+    margin-top: 100px; 
+}
+.success-message, .error-message {
+    border: 2px solid $c-green;
+    padding: 20px;
+    display: none;
+    p {
+       color: $c-green;
+       font: {
+           size: 18px;
+           weight: 600;
+           family: $roboto;
+       }
+    }
+}
+.error-message {
+    border: 2px solid $c-red;
+    p {
+        color: $c-red;
     }
 }

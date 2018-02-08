@@ -9,6 +9,11 @@ $( function () {
         $file       = $('#file-img'),
         $pars       = window.Parsley;
 
+    var $email       = $('#email'),
+        $userName    = $('#user-name'),
+        $problem     = $('#control-select'),
+        $description = $('#custom-textarea');
+
         
     // validation for submit form 
     $form.parsley().subscribe( 'parsley:field:validate', function () {
@@ -70,5 +75,43 @@ $( function () {
             reader.readAsDataURL( _files[0] );
         }
     });
+
+    // submit
+    $form.submit( function ( event ) {
+        
+        event.preventDefault();
+
+        var dataModel = {
+            username    : $userName.val(),
+            email       : $email.val(),
+            problem     : $problem.val(),
+            description : $description.val()
+
+        };
+        
+        $.post({
+            url  : 'www.google.com.ua/',
+            data : dataModel,
+            crossDomain: true
+        }).done( function ( data ) {
+
+            $('.success-message').fadeIn().delay( 4000 ).fadeOut('slow');
+
+        }).fail( function () {
+
+            $('.error-message').fadeIn().delay( 4000 ).fadeOut('slow');
+
+        }).always( function () {
+
+             $userName.val('');
+             $email.val('');
+             $problem.val('');
+             $description.val('');
+             $('#img-upload').attr( 'src', '#' );
+
+        });
+        
+    });
     
 }());
+

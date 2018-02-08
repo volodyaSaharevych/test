@@ -133,6 +133,7 @@ table {
   .box-form .boxs-body form textarea {
     border: 1px solid #E8EDF2;
     border-radius: 0;
+    text-align: left;
     font-size: 16px;
     font-weight: 400;
     font-family: "Roboto", sans-serif; }
@@ -145,6 +146,7 @@ table {
     color: #ffffff;
     border-radius: 0;
     transition: .3s;
+    margin-top: 10px;
     font-size: 18px;
     font-weight: 400;
     font-family: "Roboto", sans-serif; }
@@ -157,6 +159,24 @@ table {
       box-shadow: none; }
     .box-form .btn-custom:disabled {
       opacity: .3; }
+
+.panel-message {
+  margin-top: 100px; }
+
+.success-message, .error-message {
+  border: 2px solid #02b875;
+  padding: 20px;
+  display: none; }
+  .success-message p, .error-message p {
+    color: #02b875;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif; }
+
+.error-message {
+  border: 2px solid #f01f3d; }
+  .error-message p {
+    color: #f01f3d; }
 
 .box-form .boxs-body form .file {
   width: 0.1px;
@@ -182,5 +202,12 @@ table {
   .box-form .boxs-body form .lab-custom:hover {
     color: #02b875;
     background-color: #ffffff; }
+
+@media screen and (max-width: 540px) {
+  .box-form {
+    width: 100%; }
+
+  .panel .panel-head a {
+    font-size: 16px; } }
 
 /*# sourceMappingURL=main.css.map */

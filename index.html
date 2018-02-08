@@ -25,7 +25,7 @@
                         <div class="panel-body">
                             <div class="box-form">
                                 <div class="boxs-body">
-                                    <form name="custom-form" role="form" id="form-submit">
+                                    <form  name="form-submit" role="form" id="form-submit">
                                         <div class="wrap-submit-form">
                                             <div class="form-group">
                                                 <label for="username">Username : </label>
@@ -55,13 +55,11 @@
                                         </div>
                                         <div class="wrap-upload-form"> 
                                             <div class="form-group">
-                                                <label for="exampleTextarea">Problem</label>
-                                                <textarea class="form-control" id="custom-textarea" rows="3" 
-                                                          required=""
+                                                <label for="custom-textarea">Problem</label>
+                                                <textarea class="form-control" id="custom-textarea" rows="3" required=""
                                                           data-parsley-trigger="change"
                                                           data-parsley-minlength="5"
-                                                          data-parsley-maxlength="300">
-                                                </textarea>
+                                                          data-parsley-maxlength="300"></textarea>
                                             </div>
                                             <div class="from-group">
                                                 <div class="upload-image">
@@ -73,18 +71,24 @@
                                                 <input type="file" name="file" id="file-img" class="file"/>
                                             </div>
                                         </div>
+                                        <div class="boxs-footer text-right">
+                                            <button type="submit" class="btn btn-custom" id="btn-form-submit" disabled>Send</button>
+                                        </div>
                                     </form>
-                                </div>
-                                <div class="boxs-footer text-right">
-                                    <button type="submit" class="btn btn-custom" id="btn-form-submit" for="from-submit" disabled>Send</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-5">
-                    <div class="success-message"></div>
-                    <div class="error-message"></div>
+                    <div class="panel-message">
+                        <div class="success-message">
+                            <p>Request success</p>
+                        </div>
+                        <div class="error-message">
+                            <p>Request error</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
